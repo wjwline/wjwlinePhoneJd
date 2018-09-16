@@ -1,0 +1,54 @@
+/*通用样式*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /*设置手指点击高亮显示，这里设置为透明*/
+  -webkit-tap-highlight-color: transparent;
+  font-family: "microsoft yahei", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/*清除input的默认样式*/
+input {
+  border: 0;
+  -webkit-appearance: none;
+}
+img {
+  display: block;
+}
+/*浮动*/
+.f_l {
+  float: left!important;
+}
+.f_r {
+  float: right!important;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+/*边框*/
+.b_t {
+  border-top: 1px solid #ccc;
+}
+.b_r {
+  border-right: 1px solid #ccc;
+}
+.b_b {
+  border-bottom: 1px solid #ccc;
+}
+.b_l {
+  border-left: 1px solid #ccc;
+}

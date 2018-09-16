@@ -1,0 +1,246 @@
+/*京东红样式*/
+@jdColor: rgb(201, 21, 35);
+.jd_container {
+/*最外面的容器盒子*/
+	width: 100%;
+	min-height: 800px;
+	background-color: #eee;
+	.container_header {
+	/*顶部通栏*/
+		width: 100%;
+		height: 40px;
+		z-index: 9999;
+		position: fixed;
+		line-height: 40px;
+		background-color: @jdColor;
+		padding: 0px 60px 0px 70px;
+		.header_logo {
+			top: 2px;
+			left: 5px;
+			width: 60px;
+			height: 36px;
+			position: absolute;
+			background: url("../images/sprites.png") no-repeat 0px -103px;
+			background-size: 200px 200px;
+		}
+		.header_glass {
+			top: 10px;
+			left: 75px;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			background: url("../images/sprites.png") no-repeat -60px -109px;
+			background-size: 200px 200px;
+		}
+		.header_search {
+			width: 100%;
+			height: 30px;
+			margin-top: 5px;
+			padding-left: 25px;
+			border-radius: 15px; 
+		}
+		.header_login {
+			top: 0px;
+			right: 10px;
+			color: #fff;
+			font-size: 17px;
+			position: absolute;
+		}
+	}
+	.container_slider {
+	/*顶部轮播图*/
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		.slider_img {
+			width: 1000%;
+			//默认显示第一张图片
+			transform: translateX(-320px);
+			li {
+				width: 10%;
+				float: left; 
+				a {
+					width: 100%;
+					display: block;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.slider_index {
+			left: 50%;
+			bottom: 10px;
+			margin-left: -44px;
+			position: absolute;
+			li {
+				width: 6px;
+				height: 6px;
+				float: left;
+				margin-left: 5px;
+				border-radius: 50%;
+				border: 1px solid #fff;
+				&.current {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+	.container_nav {
+	/*导航*/
+		width: 100%;
+		padding-top: 10px;
+		background-color: #fff;
+		border-bottom: 1px solid #ccc;
+		ul {
+			width: 100%;
+			li {
+				width: 25%;
+				float: left;
+				text-align: center;
+				a {
+					width: 100%;
+					display: block;
+					img {
+						width: 55%;
+						margin: 0px auto;
+					}
+				}
+				p {
+					color: gray;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+	.container_main {
+		/*主体部分*/
+		width: 100%;
+		padding: 10px 5px;
+		.main_content {
+			width: 100%;
+			min-height: 150px;
+			margin-bottom: 7px;
+			background-color: #fff;
+			box-shadow: 0px 0px 2px gray;
+			&:nth-child(n+2) {
+				/*主体部分除第一块特殊样式*/
+				.main_content_top {
+					border-bottom: 1px solid #ccc;
+					span {
+						color: @jdColor;
+						font-size: 15px;
+						margin-left: 15px; 
+						position: relative;
+						&::before {
+							content: "";
+							width: 5px;
+							height: 15px;
+							top: 3px;
+							left: -10px;
+							margin-right: ;
+							background-color: @jdColor;
+							position: absolute;
+						}
+					}
+				}
+				.main_content_bottom {
+					ul {
+						li {
+							width: 50%;
+							a {
+								border-right: none;
+								img {
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+			.main_content_top {
+				width: 100%;
+				height: 32px;
+				line-height: 32px;
+				.main_content_top_left {
+					height: 100%;
+					margin-left: 7px;
+					span {
+						float: left;
+						width: 20px;
+						height: 25px;
+						margin: 3.5px 5px 3.5px 0px; 
+						background: url("../images/seckill-icon.png") no-repeat;
+						background-size: 20px 25px;
+					}
+					p {
+						float: left;
+						color: @jdColor;
+					}
+					ul {
+						float: left;
+						margin: 8.5px 0px 0px 5px;
+						li {
+							color: #fff;
+							float: left;
+							width: 15px;
+							height: 15px;
+							margin-left: 3px;
+							line-height: 15px; 
+							text-align: center;
+							background-color: #000;
+							&:nth-child(3n) {
+								width: 6px;
+								color: #000;
+								background-color: #fff;
+							}
+						}
+					}
+				}
+				.main_content_top_right {
+					margin-right: 5px;
+					a {
+						color: gray;
+					}
+				}
+			}
+			.main_content_bottom {
+				width: 100%;
+				height: 100%;
+				ul {
+					width: 100%;
+					li {
+						float: left;
+						width: 33.333333%;
+						text-align: center;
+						&:nth-child(3) {
+							a {
+								border-right: 0;
+							}
+						}
+						a {
+							width: 100%;
+							display: block;
+							border-right: 1px solid #ccc;
+							img {
+								width: 65%;
+								margin: 1px auto 2px;
+							}
+						}
+						p {
+							line-height: 25px;
+							&:nth-child(2) {
+								color: @jdColor;
+							}
+							&:nth-child(3) {
+								margin-top: -3px;
+								padding-bottom: 5px;
+								text-decoration: line-through;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
